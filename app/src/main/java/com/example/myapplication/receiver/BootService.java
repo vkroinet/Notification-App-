@@ -1,18 +1,13 @@
-package com.example.myapplication;
+package com.example.myapplication.receiver;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
 
 import androidx.annotation.Nullable;
-import androidx.core.app.NotificationCompat;
-
-import java.security.Provider;
 
 public class BootService extends Service {
     private static final String CHANNEL_ID = "boot_channel";
@@ -23,7 +18,7 @@ public class BootService extends Service {
         super.onCreate();
         createNotificationChannel();
 
-        Intent notificationIntent = new Intent(this, MainActivity.class);
+       /* Intent notificationIntent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent =
                 PendingIntent.getActivity(this, 0, notificationIntent,
                         PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
@@ -36,7 +31,8 @@ public class BootService extends Service {
                 .setAutoCancel(true)
                 .build();
 
-        startForeground(1, notification);
+        startForeground(1, notification);*/
+
     }
 
     @Override
